@@ -53,3 +53,23 @@ You can view the result at https://tttapa.github.io/doxygen-mermaid/Doxygen.
      */
     ```
     (With `filename` the filename of the graph without the `.mmd` extension.)
+
+
+## Additional instructions to add embedded mermaid diagrams
+
+1. Add following filter into Doxyfile
+
+```
+    FILTER_PATTERNS = *.md=./doxygen_filter_mermaid.sh
+```
+
+2. Add an embedded mermaid diagram into an .md file
+
+
+~~~
+```mermaid
+  graph TD 
+    A --> B
+```
+~~~
+

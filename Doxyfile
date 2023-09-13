@@ -1,6 +1,8 @@
 PROJECT_NAME = doxygen-mermaid
 PROJECT_BRIEF = Mermaid graphs in doxygen 🧜‍♀️
-INPUT = index.md
+INPUT = index.md \
+        communication.md \
+        comm.h
 USE_MDFILE_AS_MAINPAGE = index.md
 EXAMPLE_PATH = graphs
 ALIASES = mermaid{1}="@htmlonly <div class=\"mermaid\"> ^^ @endhtmlonly @htmlinclude \"\1.mmd\" @htmlonly ^^ </div> @endhtmlonly"
@@ -10,3 +12,4 @@ HTML_EXTRA_STYLESHEET = custom_stylesheet.css
 STRIP_CODE_COMMENTS = NO
 GENERATE_LATEX = NO
 QUIET = YES
+FILTER_PATTERNS = *.md=./doxygen_filter_mermaid.sh
